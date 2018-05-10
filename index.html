@@ -1,0 +1,164 @@
+<DOCTYPE html>
+<html>
+<style>
+
+body {
+    background-image: url("Background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/* Centered heading text*/
+.centered-top-heading {
+	position: relative;
+    font-family: 'Tangerine', cursive;
+    font-size: 90px;
+    text-align: center;
+}
+/* Centered top text*/
+.centered-top {
+	position: relative;
+    font-family: 'Raleway', sans-serif;;
+    font-size: 20px;
+    text-align: center;
+    display:block;
+}
+/* Centered top text*/
+.centered-top-menu {
+	position: relative;
+    font-family: 'Raleway', sans-serif;;
+    font-size: 30px;
+    text-align: center;
+    display:block;
+}
+
+/* Hotel formatting*/
+.hotels {
+	position: relative;
+    font-family: 'Tangerine', serif;
+    font-size: 50px;
+    display: inline-block;
+    padding-left: 20%;
+
+}
+/* Table formatting*/
+table, td, th {    
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    font-size: 50px;
+}
+table {
+    width: 75%;
+}
+
+
+.center{
+    margin:auto;
+    border: 8px solid #ffffff;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+</style>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112400388-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112400388-1');
+</script>
+
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div class="centered-top-heading">The Wedding<br><font size="6px">of</font><br>Hannah <font size="8px">and</font> Gabriel</div>
+    <div class="centered-top">21 July 2018
+        <br>6:30PM 
+        <br><a href="https://goo.gl/maps/wQNN2dnUjmn" target="_blank">355 South Windsor Blvd
+        <br>Los Angeles, California</a>
+        <br><br>Please join us for the wedding ceremony, dinner, and dancing.
+        <br>All will be held in the garden of a family friend.
+        <br>Please arrive in garden party attire.
+    </div>
+    <div class="center" id="weddingMap" style="width:600px;height:300px"></div>
+    <div class="centered-top-menu">   
+        <br><a href="Responses.html"> Menu Selection</a>
+    </div>
+    
+    
+    <div class="centered-top"><br></div>
+    <div class="centered-top-heading">Polterabend</div>
+    <div class="centered-top">20 July 2018
+        <br>7:00PM
+        <br><a href="https://goo.gl/maps/2KY8XQBRLV52" target="_blank">163 Wilton Drive
+        <br>Los Angeles, California</a>
+        <br>
+        <br>We welcome you to join us at the McDermott family home for a pre-wedding party.
+        <br>The "Polterabend" is a traditional German event the night before the wedding.
+        <br>There will be food, music and merriment. Causal attire will be appropriate.
+    </div>
+    <div class=center id="polterMap" style="width:600px;height:300px"></div>    
+    
+    <div class="centered-top"><br></div>
+    <div class="centered-top-heading">Suggested Hotels</div>
+    <table align="center">
+          <tr>
+            <td><a href="https://www.thelinehotel.com/los-angeles/" target="_blank">Line Hotel</a></td>
+            <td><a href="http://www.hollywoodhistorichotel.com/" target="_blank">Hollywood Historic</td>
+          </tr>
+          <tr>
+            <td><a href="http://theaventurahotel.com/" target="_blank">Adventura Hotel</a></td>
+            <td><a href="http://www.hotelnormandiela.com/" target="_blank">Hotel Normandie</a></td>
+          </tr>
+    </table>
+    
+    <div class="centered-top-heading"><a href="https://www.zola.com/registry/hannahandgabe/" target="_blank">Registry </a></div>
+    <div class="centered-top">We greatly appreciate any gifts you choose to give or make us. <br> However, if you would like suggestions, you can use our registry. 
+
+    
+    
+</div> 
+
+
+<script>
+function initMaps() {
+    var weddingPos={lat: 34.0674181, lng: -118.321853};
+    var polterPos={lat: 34.071483, lng: -118.314698};
+  
+    var wMap=new google.maps.Map(document.getElementById("weddingMap"),{center:weddingPos,zoom:11,disableDefaultUI: true});
+    var wMarker=new google.maps.Marker({position: weddingPos,map: wMap});
+   
+    var pMap=new google.maps.Map(document.getElementById("polterMap"),{center: polterPos,zoom:11,disableDefaultUI: true});
+    var pMarker=new google.maps.Marker({position: polterPos,map: pMap,});
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO65GMkAgIp-TACWjaqXo6_DChcHeay30&callback=initMaps"></script>
+    
+</body>
+</html>
+
+
+
